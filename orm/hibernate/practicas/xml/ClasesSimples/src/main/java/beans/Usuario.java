@@ -5,8 +5,6 @@
 package beans;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  *
@@ -17,7 +15,6 @@ public class Usuario implements Serializable {
     private Long id;
     private String nombre;
     private String clave;
-    private Set<Rol> roles = new HashSet<Rol>();
 
     public Usuario() {
     }
@@ -51,14 +48,6 @@ public class Usuario implements Serializable {
         this.nombre = nombre;
     }
 
-    public Set<Rol> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Rol> roles) {
-        this.roles = roles;
-    }
-
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -71,7 +60,10 @@ public class Usuario implements Serializable {
         if (this.nombre != other.nombre && (this.nombre == null || !this.nombre.equals(other.nombre))) {
             return false;
         }
-        return !(this.clave != other.clave && (this.clave == null || !this.clave.equals(other.clave)));
+        if (this.clave != other.clave && (this.clave == null || !this.clave.equals(other.clave))) {
+            return false;
+        }
+        return true;
     }
 
     @Override
@@ -84,6 +76,6 @@ public class Usuario implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("La clave del usuario %s es %s, su id es %d y su roles son %s", getNombre(), getClave(), getId(), getRoles());
+        return String.format("La clave del usuario %s es %s y su id es %d", getNombre(), getClave(), getId());
     }
 }

@@ -10,3 +10,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/orm/hibernate/Anotaciones/PracticaHibernateAnotaciones/target/
+/orm/hibernate/practicas/xml/ClasesSimples/target/
+/orm/hibernate/practicas/xml/RelacionesBidireccionales/target/
+/orm/hibernate/practicas/anotaciones/AnotacionesBidireccionales/target/

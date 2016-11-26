@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.curso.java</groupId>
-  <artifactId>ClasesConRelacionesBidireccionales0001</artifactId>
+  <artifactId>RelacionesBidireccionales</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>ClasesConRelacionesBidireccionales0001</name>
+  <name>RelacionesBidireccionales</name>
   <url>http://maven.apache.org</url>
 
   <properties>
