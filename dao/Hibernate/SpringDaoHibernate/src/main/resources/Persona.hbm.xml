@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-lazy="false">
+  <class name="com.curso.springdaohibernate.dominio.Persona" table="personas">
+    <id access="field" column="id_persona" name="id">
+      <generator class="identity"/>
+    </id>
+    <property name="nombre"/>
+    <set access="field" cascade="all" inverse="true" lazy="true" name="aficionesInternas">
+      <key column="id_persona"/>
+      <one-to-many class="com.curso.springdaohibernate.dominio.Aficion"/>
+    </set>
+  </class>
+</hibernate-mapping>

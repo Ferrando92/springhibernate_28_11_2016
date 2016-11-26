@@ -1,0 +1,8 @@
+com\curso\java\modelo\Aficion.class
+com\curso\java\config\ConfiguracionCache.class
+com\curso\java\config\ConfiguracionRepos.class
+com\curso\java\repos\PersonaRepo.class
+com\curso\java\servicios\ServicioPersona.class
+com\curso\java\springdata0001\App.class
+com\curso\java\modelo\Persona.class
+com\curso\java\config\ConfiguracionBd.class

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="beans.tablepersubclass">
+  <class name="Figura">
+    <id name="id" column="figura_id">
+      <generator class="native"/>
+    </id>
+    <discriminator column="TIPO_FIGURA" type="integer"/>
+    <property name="color"/>
+    <joined-subclass name="Circulo">
+        <key column="figura_id"/>
+        <property name="radio"/>
+    </joined-subclass>
+  </class>
+</hibernate-mapping>

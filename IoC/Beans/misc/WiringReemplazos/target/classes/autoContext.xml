@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="jefeUno" class="com.curso.spring.beans.auto.Jefe" autowire="byName"/>
+   
+    <bean id="asesor" class="com.curso.spring.beans.Empleado">
+        <property name="nombre" value="UnAsesor"/>
+        <property name="sueldo" value="1350"/>
+    </bean>
+</beans>

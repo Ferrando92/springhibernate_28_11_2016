@@ -1,0 +1,21 @@
+PlantillaXml: Punto de partida para las prácticas con XML
+
+PlantillaAnotaciones: Punto de partida para las prácticas sin XML
+
+practicaxml: Posible solución para configurar, usando únicamente xml,
+una persona con sus roles
+
+practicaanotaciones: Posible solución para configurar, usando xml y algunas anotaciones,
+una persona con sus roles
+
+practicasinxml: Posible solución para configurar, usando únicamente anotaciones,
+una persona con sus roles
+
+PracticaEjemploAnotaciones: Posible solución para configurar, usando xml y algunas anotaciones,
+una persona con sus aficiones. Ejemplo del uso de archivos de propiedades y del lenguaje de
+expresiones de Spring
+
+PracticaEjemploAnotacionesSinXml: Posible solución para configurar, usando anotaciones,
+una persona con sus aficiones. Ejemplo del uso de archivos de propiedades y del lenguaje de
+expresiones de Spring
+

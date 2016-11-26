@@ -1,0 +1,6 @@
+com\curso\spring\ejemplosproxy\Principal.class
+com\curso\spring\implementacion\UsuarioImpl.class
+com\curso\spring\especificacion\Usuario.class
+com\curso\spring\implementacion\PersonaImpl.class
+com\curso\spring\especificacion\Persona.class
+com\curso\spring\proxies\SimpleProxy.class

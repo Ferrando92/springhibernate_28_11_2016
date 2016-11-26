@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="beans">
+    <class name="Rol">
+        <id name="id" column="rol_id">
+            <generator class="native"/>
+        </id>
+        <property name="nombre"/>
+        <set name="usuarios" table="usuarios_roles" inverse="true">
+            <key column="rol_id"/>
+            <many-to-many class="Usuario" column="usuario_id"/>
+        </set>
+    </class>
+</hibernate-mapping>

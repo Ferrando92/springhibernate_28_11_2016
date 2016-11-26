@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="usuario" class="com.curso.spring.beans.Usuario"/>
+    <bean class="com.curso.spring.postprocesadores.PostProcesador"/>
+    <bean id="demoBean" class="com.curso.spring.eventos.DemoBean"/>
+    <bean id="demoListener" class="com.curso.spring.eventos.DemoListener"/>
+    <bean id="inicializacionBean" class="com.curso.spring.ciclovida.InicializacionBean"/>
+    <bean id="destruccionBean" class="com.curso.spring.ciclovida.DestruccionBean"/>
+    <bean id="deDondeVengoBean" class="com.curso.spring.ciclovida.DeDondeVengoBean"/>
+    <bean id="comoMeLlamoBean" class="com.curso.spring.ciclovida.ComoMeLlamoBean"/>
+    <bean id="factoriaUsuarioBean" class="com.curso.spring.ciclovida.FactoriaUsuarioBean">
+        <property name="factoria">
+            <bean class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
+                <property name="targetBeanName" value="usuarioPrototipo"/>
+            </bean>
+        </property>
+    </bean>
+    <bean id="usuarioPrototipo" class="com.curso.spring.beans.Usuario" scope="prototype"/>
+</beans>

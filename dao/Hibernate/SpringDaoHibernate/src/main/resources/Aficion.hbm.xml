@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-lazy="false">
+  <class name="com.curso.springdaohibernate.dominio.Aficion" table="aficiones">
+    <id access="field" column="id_aficion" name="id">
+      <generator class="identity"/>
+    </id>
+    <property name="nombre"/>
+    <many-to-one class="com.curso.springdaohibernate.dominio.Persona" column="id_persona" name="persona"/>
+  </class>
+</hibernate-mapping>

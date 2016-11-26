@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/tx
+ http://www.springframework.org/schema/tx/spring-tx.xsd
+          http://www.springframework.org/schema/util
+ http://www.springframework.org/schema/util/spring-util.xsd
+">
+    <context:property-placeholder location="classpath:datasource.properties"/>
+
+    <import resource="datasource.xml"/>
+    <bean class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
+          id="sessionFactory">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mappingResources">
+            <list>
+                <value>Aficion.hbm.xml</value>
+            </list>
+        </property>
+        <property name="packagesToScan">
+            <list>
+                <value>com.curso.java.modelo</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${hibernate.dialect}
+                </prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}
+                </prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql}
+                </prop>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.auto}
+                </prop>
+                <prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+                <prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+                <!-- Para Hibernate 3.X
+                <prop key="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</prop>
+                -->
+                <prop key="hibernate.cache.region.factory_class">${hibernate.cache.region.factory_class}</prop>
+                <prop key="hibernate.cache.use_structured_entries">${hibernate.cache.use_structured_entries}</prop>          
+                <prop key="hibernate.generate_statistics">${hibernate.generate_statistics}</prop>                      
+            </props>
+        </property>
+    </bean>
+    <context:component-scan base-package="com.curso.java"/>
+    <tx:annotation-driven/>
+</beans>

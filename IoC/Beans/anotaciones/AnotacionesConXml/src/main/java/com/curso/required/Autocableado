@@ -1,0 +1,4 @@
+Las anotaciones @Autowired y @Resource a nivel de atributo no funcionan bien en conjunción
+con @Required.
+Si se ponen a nivel de método, en el mismo lugar donde colocamos el @Required, parecen funcionar
+correctamente.

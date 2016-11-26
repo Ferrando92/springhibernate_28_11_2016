@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+">
+    <bean id="persona" class="com.curso.herencia.Persona" p:nombre="abc"/>
+    <bean id="usoConcreto" class="com.curso.herencia.Empleado" parent="persona" p:sueldo="2000.0d"/>
+    <bean class="com.curso.herencia.OtroEmpleado" parent="persona" p:sueldo="1000.0d"/>
+    <bean id="abstracto" p:nombre="xyz" abstract="true"/>
+    <bean id="usoAbstracto" class="com.curso.herencia.Empleado" parent="abstracto" p:sueldo="3000.0d"/>
+</beans>

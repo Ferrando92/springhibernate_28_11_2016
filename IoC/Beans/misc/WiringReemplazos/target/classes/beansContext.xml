@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="personaDefecto" class="com.curso.spring.beans.Persona"/>
+    <bean id="personaFactoria" class="com.curso.spring.beans.Persona"
+          factory-method="crearPersona"/>
+    <bean id="personaPrototipo" class="com.curso.spring.beans.Persona"
+          scope="prototype"/>
+    <bean id="empleadoUno" class="com.curso.spring.beans.Empleado">
+        <property name="sueldo" value="2000"/>
+    </bean>
+    <bean id="empleadoDos" class="com.curso.spring.beans.Empleado">
+        <constructor-arg value="López"/>
+        <constructor-arg type="int" value="2500"/>
+    </bean>
+    <bean id="responsable" class="com.curso.spring.beans.Empleado"/>
+    <bean id="departamento" class="com.curso.spring.beans.Departamento">
+        <property name="responsable" ref="responsable"/>
+    </bean>
+</beans>

@@ -1,0 +1,17 @@
+SpringIoC000Maven
+HerenciaAutoCableadoAmbitos
+WiringReemplazos
+AnotacionesConXml
+AnotacionesSinXml
+PerfilesEntornos
+EjemploAnotaciones
+EjemplosProxyMaven
+EjemploProxy
+CicloVidaEventosPostProcesadores
+EjemploPostProcesador
+Configurables
+Internacionalizacion
+ValidacionPropietariaSpring
+ValidacionJavaEstandar
+SpringOxmMaven
+BeansAnonimosMaven

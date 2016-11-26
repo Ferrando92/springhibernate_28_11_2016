@@ -1,0 +1,23 @@
+Ciclo de vida	XML		Instanciación
+-------------	---		--------------
+@Required	N/A		@Component
+@Autowired	byType		@Service
+@Resource	byName		@Repository
+@Scope		scope		@Controller
+@Lazy		lazy-init
+@DependsOn	depends-on
+@PostConstruct	init-method
+@PreDestroy	destroy-method
+
+Otras
+-----
+@Inject
+@Named
+@Configuration
+@Bean
+@ComponentScan
+@PropertySource
+@Import
+@ImportResource
+@Profile
+@EnableXXX

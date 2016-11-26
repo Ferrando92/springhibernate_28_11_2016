@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+">
+    <bean id="contenedor1" class="com.curso.cableado.Contenedor" autowire="byName" />
+    <bean id="contenido" class="com.curso.cableado.Contenido"/>
+    <bean id="contenedor2" class="com.curso.cableado.Contenedor" autowire="byType" />
+    <bean class="java.lang.String" c:_0="Test1"/>
+    <bean class="java.lang.String" c:_0="Test2" autowire-candidate="false"/>
+    <bean class="java.lang.String" c:_0="Test3"/>
+    <bean class="com.curso.cableado.CableadoPorConstructor" autowire="constructor"/>
+</beans>
